@@ -14,7 +14,7 @@
         </v-col>
       </v-row>
       <v-row>
-        <v-col v-for="(planes, index) in dataPlanes" :key="index" lg="4">
+        <v-col v-for="(planes, index) in data.planes" :key="index" lg="4">
           <Card :subtitulo="`${planes.titulo}`" :parrafo="`${planes.texto}`" />
         </v-col>
       </v-row>
@@ -25,7 +25,7 @@
             
           </v-row>
           <v-row>
-            <v-col v-for="(item, index) in dataOpiniones" :key="'A'+index" lg="4">
+            <v-col v-for="(item, index) in data.opiniones" :key="'A'+index" lg="4">
               <Card2 :subtitulo="`${item.nombre}`" :parrafo="`${item.texto}`" />
             </v-col>
           </v-row>
@@ -46,21 +46,51 @@ export default {
   },
   data() {
     return {
+      data:{
+  "planes": [
+    {
+      "titulo": "Paga lo que hablas",
+      "texto": "En BigMobile, sólo pagas lo que hablas. Nada de perder minutos ni cobros de más"
+    },
+    {
+      "titulo": "Cambiate cuando quiera",
+      "texto": "En BigMobile, no te amarramos. Puedes cambiarte de plan cuando quieras"
+    },
+    {
+      "titulo": "Minutos adicionales",
+      "texto": "Si quedaste corto de minutos este mes, puedes agregar minutos adicionales al mismo precio que tu plan"
+    }
+  ],
+  "opiniones": [
+    {
+      "nombre": "José Pedreros",
+      "texto": "Son bacanes! Esta compañía te apaña caleta."
+    },
+    {
+      "nombre": "Miguel Cáceres",
+      "texto": "Acá sí te contestan el teléfono cuando los llamas"
+    },
+    {
+      "nombre": "Soledad Gómez",
+      "texto": "Lo mejor es la señal"
+    }
+  ]
+},
       gradient: 'to top, #7B1FA2, #E1BEE7',
-      dataPlanes :[],
-      dataOpiniones:[],
+      // dataPlanes :[],
+      // dataOpiniones:[],
     };
   },
   methods:{
 
   },
   created(){
-    fetch("/home.json")
-            .then(response => response.json())
-            .then((data) => {
-              this.dataPlanes=data.planes;
-              this.dataOpiniones=data.opiniones;
-            });
+    // fetch("/home.json")
+    //         .then(response => response.json())
+    //         .then((data) => {
+    //           this.dataPlanes=data.planes;
+    //           this.dataOpiniones=data.opiniones;
+    //         });
   }
 
 };
