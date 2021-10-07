@@ -9,7 +9,7 @@
       <v-col cols="6" class="mx-auto parrafo ">
         <v-card class="pa-2 text-center" justify="center">
           <p>
-            La Orden <b class="font-weight-bold">N° {{ numeroOrden }} </b>ha sido <b class="font-weight-bold">{{ statusOrden }} </b> y ya la estamos preparando!
+            La Orden <b class="font-weight-bold">N° {{ data.orderNumber }} </b>ha sido <b class="font-weight-bold">{{ data.status }} </b> y ya la estamos preparando!
           </p>
         </v-card>
       </v-col>
@@ -28,17 +28,19 @@ export default {
   name:"confirmacion",
   data() {
     return {
-      numeroOrden: "",
-      statusOrden: "",
+      data:{
+        "orderNumber": 4452239,
+        "status": "CONFIRMADO"
+      },
     };
   },
   created() {
-    fetch("/orderprocessresp.json")
-      .then((response) => response.json())
-      .then((data) => {
-        this.numeroOrden = data.orderNumber;
-        this.statusOrden = data.status;
-      });
+    // fetch("/orderprocessresp.json")
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     this.numeroOrden = data.orderNumber;
+    //     this.statusOrden = data.status;
+    //   });
   },
 };
 </script>
