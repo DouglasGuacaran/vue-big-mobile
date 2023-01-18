@@ -130,7 +130,7 @@
 import CardCompra from "../components/CardCompra.vue";
 import {mapState} from "vuex";
 export default {
-  name: "Checkout",
+  name: "checkoutView",
   components:{
     CardCompra
   },

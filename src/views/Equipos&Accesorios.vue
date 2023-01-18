@@ -5,9 +5,9 @@
         <h3>Equipos & Accesorios</h3>
       </v-col>
     </v-row>
-    <v-container>
+    <v-container class="grey lighten-1">
       <v-row>
-      <v-col cols="2" md="4" sm="12" class="m-3">
+      <v-col md="8" xl="12">
         <v-row>
           <h2>Bolsa de Compras BIG MOBILE</h2>
         </v-row>
@@ -68,7 +68,7 @@ import Card from "../components/CardsEquipos.vue";
 import {mapState} from "vuex";
 import CardCompra from '../components/CardCompra.vue';
 export default {
-  name: "EquiposyAccesorios",
+  name: "equiposyaccesoriosView",
   components: {
     Card,
     CardCompra

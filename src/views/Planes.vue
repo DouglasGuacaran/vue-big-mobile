@@ -6,7 +6,8 @@
 
 <script>
 export default {
-
+  name:"planesView",
+  
 }
 </script>
 

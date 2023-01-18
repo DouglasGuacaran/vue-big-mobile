@@ -3,8 +3,12 @@
       class="mx-auto"
     >
     <v-img
-      :width="width"
-      src="https://www.inetshop.cl/sitionuevo/wp-content/uploads/2021/08/MOTOROLA-MOTO-G10-POWER-64GB-gray.jpg"
+    height="100"
+    width="45 px"
+    border-radius="15 px"
+    contain
+    src="https://depor.com/resizer/wxsfbFb8TFOb0WEf4BcrSaZ5I1M=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/KWPHGOXCA5EIFDUFDS6TUVE6LI.jpg"
+    class="grey darken-3"
     ></v-img>
     <v-card-text>
       <v-row class="text-h4 text--primary">
@@ -46,9 +50,10 @@
 import { mapActions, mapState } from 'vuex'
 
 export default {
+  name: 'equiposView',
     data(){
       return{
-        width: 200,
+        // width: 100,
       }
     },
     name:"CardEquipos",

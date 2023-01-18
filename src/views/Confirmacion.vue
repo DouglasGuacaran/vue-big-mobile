@@ -25,7 +25,7 @@
 <script>
 
 export default {
-  name:"confirmacion",
+  name:"confirmacionView",
   data() {
     return {
       data:{
