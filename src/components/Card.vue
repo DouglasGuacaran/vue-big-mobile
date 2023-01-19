@@ -1,24 +1,40 @@
 <template>
-  <v-card class="mx-auto" max-width="344">
+  <v-card 
+  width="344"
+  shaped
+  >
     <v-img
-      height="110"
-      contain
+      width="344"
+      max-height="325"
       :src="`${imgSrc}`"
+      contain
+
     ></v-img>
-    <v-card-text>
-      <div class="text-h6 text--primary text-center">
+    <v-card-title>
+      <h2>
         {{ subtitulo }}
-      </div>
-      <div class="text--primary text-center">
+      </h2>
+    </v-card-title>
+    <v-card-subtitle>
+      <h3>
         {{ parrafo }}
-      </div>
-    </v-card-text>
+      </h3>
+    </v-card-subtitle>
+    <v-card-actions>
+      <v-btn 
+      dark
+      to="/bigmobile.cl/equiposyaccesorios"
+      class="red--text"
+      >
+      Entrar
+    </v-btn>
+    </v-card-actions>      
   </v-card>
 </template>
 
 <script>
 export default {
-  name:"Card",
+  name:"cardView",
   data: () => ({
     width: 200,
   }),
@@ -31,4 +47,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>
