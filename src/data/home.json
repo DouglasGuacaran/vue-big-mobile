@@ -1,0 +1,36 @@
+{
+  "planes": [
+    {
+      
+      "titulo": "Paga lo que hablas",
+      "texto": "En BigMobile, sólo pagas lo que hablas. Nada de perder minutos ni cobros de más"
+    },
+    {
+      
+      "titulo": "Cambiate cuando quiera",
+      "texto": "En BigMobile, no te amarramos. Puedes cambiarte de plan cuando quieras"
+    },
+    {
+      
+      "titulo": "Minutos adicionales",
+      "texto": "Si quedaste corto de minutos este mes, puedes agregar minutos adicionales al mismo precio que tu plan"
+    }
+  ],
+  "opiniones": [
+    {
+      "img":"https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "nombre": "José Pedreros",
+      "texto": "Son bacanes! Esta compañía te apaña caleta."
+    },
+    {
+      "img":"https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG9tYnJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+      "nombre": "Miguel Cáceres",
+      "texto": "Acá sí te contestan el teléfono cuando los llamas"
+    },
+    {
+      "img":"https://images.unsplash.com/photo-1616002411355-49593fd89721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGZvdG8lMjBkZSUyMGNoaWNhc3xlbnwwfHwwfHw%3D&w=1000&q=80",
+      "nombre": "Soledad Gómez",
+      "texto": "Lo mejor es la señal"
+    }
+  ]
+}

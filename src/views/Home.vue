@@ -2,7 +2,7 @@
   <v-container>
 
     <v-row>
-      <v-col class="mx-auto" v-for="(item, index) in dataOpiniones" :key="index" >
+      <v-col class="mx-auto" v-for="(item, index) in Data.opiniones" :key="index" >
         <Card :imgSrc="item.img" :subtitulo="item.nombre" :parrafo="item.texto"/>
       </v-col>
     </v-row>
@@ -11,27 +11,17 @@
 
 <script>
 import Card from '../components/Card.vue'
+import Data from '../data/home.json'
 export default {
   name: "homeView",
   components: {
-    Card 
+    Card,
   },
   data () {
     return {
-      dataOpiniones:[],
-      dataplanes:[]
+      Data
     }
   },
-  created(){
-    fetch("/home.json")
-        .then(response => response.json())
-        .then((data) => {
-          this.dataPlanes=data.planes;
-          this.dataOpiniones=data.opiniones;
-      });
-  }
-
-
 
 }
 </script>
