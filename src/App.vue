@@ -1,8 +1,10 @@
 <template>
-  <div id="app" class="app">
+  <v-app id="app" class="app">
     <Navbar id="nav-bar-sticky" />
-    <router-view/>
-  </div>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
     
 </template>
 

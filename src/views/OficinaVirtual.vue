@@ -1,5 +1,6 @@
 <template>
     <v-app>
+      <h1 class="text-h2">Hola</h1>
       
       
     </v-app>  
