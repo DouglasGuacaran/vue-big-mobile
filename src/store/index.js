@@ -15,7 +15,8 @@ export default new Vuex.Store({
       console.log(post)
       state.equiposAgregados.push({
         nombre: post.nombre,
-        precio: post.precio
+        precio: post.precio,
+        img: post.img
       })
     },
     subTotalMutation(state, post) {

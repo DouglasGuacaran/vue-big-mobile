@@ -22,9 +22,8 @@
     </v-card-subtitle>
     <v-card-actions>
       <v-btn 
-      dark
       to="/bigmobile.cl/equiposyaccesorios"
-      class="red--text"
+      class="purple--text"
       >
       Entrar
     </v-btn>

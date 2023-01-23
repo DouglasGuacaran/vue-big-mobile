@@ -5,9 +5,9 @@
         <h3>Equipos & Accesorios</h3>
       </v-col>
     </v-row>
-    <v-container class="grey lighten-1">
+    <v-container>
       <v-row>
-      <v-col md="8" xl="12">
+      <v-col>
         <v-row>
           <h2>Bolsa de Compras BIG MOBILE</h2>
         </v-row>
@@ -15,8 +15,9 @@
           <v-divider class="my-2"></v-divider>
         </v-row>
         <v-row>
-        <v-col class="my-2" v-for="(equipo, index) in equiposAgregados" :key="index">
+        <v-col class="my-auto" v-for="(equipo, index) in equiposAgregados" :key="index">
           <CardCompra 
+          :imgSrc="equipo.img"
           :nombre="equipo.nombre"
           :precio="equipo.precio"
           />
@@ -37,10 +38,11 @@
           <v-btn class="primary m-3"  to="/bigmobile.cl/equiposyaccesorios/checkout"> Pagar </v-btn>
         </v-row>
       </v-col>
-      <v-col cols="10" md="8" sm="12" class="cards">
+      <v-col cols="12" md="8" sm="12" >
         <v-row>
-        <v-col v-for="(item, index) in data.productos" :key="'A'+index" cols="3">
+        <v-col v-for="(item, index) in Data.productos" :key="'A'+index" cols="12" sm="4" md="4">
           <Card
+            :imgSrc="`${item.img}`"
             :id="`${item.id}`"
             :subtitulo="`${item.nombre}`"
             :caracteristicas="`${item.caracteristicas}`"
@@ -67,129 +69,17 @@
 import Card from "../components/CardsEquipos.vue";
 import {mapState} from "vuex";
 import CardCompra from '../components/CardCompra.vue';
+import Data from '../data/equipos.json'
 export default {
   name: "equiposyaccesoriosView",
   components: {
     Card,
-    CardCompra
+    CardCompra,
   },
   data() {
     return {
+      Data,
       data:{
-  "productos": [
-    {
-      "id": "2334",
-      "nombre": "Motorola G10",
-      "caracteristicas": [
-        "Camara 10 MPx",
-        "4 GB RAM",
-        "32 GB ROM",
-        "3G/4G",
-        "Chip Dual"
-      ],
-      "precio_normal": 199000,
-      "precio_promo": 99000,
-      "imagen": "prod_2334.jpg"
-    },
-    {
-      "id": "2335",
-      "nombre": "Motorola G20",
-      "caracteristicas": [
-        "Camara 10 MPx",
-        "4 GB RAM",
-        "32 GB ROM",
-        "3G/4G",
-        "Chip Dual"
-      ],
-      "precio_normal": 149000,
-      "precio_promo": 79000,
-      "imagen": "prod_2335.jpg"
-    },
-    {
-      "id": "2336",
-      "nombre": "Motorola G30",
-      "caracteristicas": [
-        "Camara 10 MPx",
-        "4 GB RAM",
-        "32 GB ROM",
-        "3G/4G",
-        "Chip Dual"
-      ],
-      "precio_normal": 169000,
-      "precio_promo": 89000,
-      "imagen": "prod_2336.jpg"
-    },
-    {
-      "id": "2337",
-      "nombre": "Samsung A10",
-      "caracteristicas": [
-        "Camara 10 MPx",
-        "4 GB RAM",
-        "32 GB ROM",
-        "3G/4G",
-        "Chip Dual"
-      ],
-      "precio_normal": 129000,
-      "precio_promo": 59000,
-      "imagen": "prod_2337.jpg"
-    },
-    {
-      "id": "2338",
-      "nombre": "Samsung A20",
-      "caracteristicas": [
-        "Camara 10 MPx",
-        "4 GB RAM",
-        "32 GB ROM",
-        "3G/4G",
-        "Chip Dual"
-      ],
-      "precio_normal": 119000,
-      "precio_promo": 59000,
-      "imagen": "prod_2338.jpg"
-    },
-    {
-      "id": "2339",
-      "nombre": "Samsung A30",
-      "caracteristicas": [
-        "Camara 10 MPx",
-        "4 GB RAM",
-        "32 GB ROM",
-        "3G/4G",
-        "Chip Dual"
-      ],
-      "precio_normal": 189000,
-      "precio_promo": 89000,
-      "imagen": "prod_2339.jpg"
-    },
-    {
-      "id": "2340",
-      "nombre": "Huawei Y6",
-      "caracteristicas": [
-        "Camara 10 MPx",
-        "4 GB RAM",
-        "32 GB ROM",
-        "3G/4G",
-        "Chip Dual"
-      ],
-      "precio_normal": 139000,
-      "precio_promo": 79000,
-      "imagen": "prod_2340.jpg"
-    },
-    {
-      "id": "2341",
-      "nombre": "Huawei Y7",
-      "caracteristicas": [
-        "Camara 10 MPx",
-        "4 GB RAM",
-        "32 GB ROM",
-        "3G/4G",
-        "Chip Dual"
-      ],
-      "precio_normal": 149000,
-      "precio_promo": 69000,
-      "imagen": "prod_2341.jpg"
-    }
-  ],
   "pagedResult": {
     "page": 1,
     "size": 10,
@@ -208,15 +98,6 @@ export default {
     
   },
 
-  created() {
-    // fetch("/equipos.json")
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     console.log(data)
-    //     this.productos = data.productos;
-        
-    //   });
-  },
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <div>
-      <h3 class="text-h1">
+      <h3 class="text-h5 text-sm-h4 text-center">
         Bienvenido a mi sitio web
       </h3>
     </div>

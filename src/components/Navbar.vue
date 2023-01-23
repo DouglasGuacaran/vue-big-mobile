@@ -47,7 +47,7 @@
     <v-navigation-drawer
       v-model="drawer"
       absolute
-      bottom
+      left
       temporary
       class="navigation-drawer"
     >

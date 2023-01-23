@@ -2,6 +2,7 @@
   "productos": [
     {
       "id": "2334",
+      "img": "https://plazavea.vteximg.com.br/arquivos/ids/2330574/image-fc17e8bf679a49edbf5324fb2fdb52bd.jpg?v=637661279202200000",
       "nombre": "Motorola G10",
       "caracteristicas": [
         "Camara 10 MPx",
@@ -16,6 +17,7 @@
     },
     {
       "id": "2335",
+      "img": "https://miportal.entel.cl/static/121220221421374/images/motorola-moto-g20-rosa-02_276x549.jpg",
       "nombre": "Motorola G20",
       "caracteristicas": [
         "Camara 10 MPx",
@@ -30,6 +32,7 @@
     },
     {
       "id": "2336",
+      "img": "https://www.motorola.cl/arquivos/g30-release-BasicPack-PastelSky-Backside.png",
       "nombre": "Motorola G30",
       "caracteristicas": [
         "Camara 10 MPx",
@@ -44,6 +47,7 @@
     },
     {
       "id": "2337",
+      "img": "data:image/jpeg;base64,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",
       "nombre": "Samsung A10",
       "caracteristicas": [
         "Camara 10 MPx",
@@ -58,6 +62,7 @@
     },
     {
       "id": "2338",
+      "img": "https://www.entel.cl/empresas/catalogo-equipos/detalle/assets/images/samsung-galaxy-A20-2.png",
       "nombre": "Samsung A20",
       "caracteristicas": [
         "Camara 10 MPx",
@@ -72,6 +77,7 @@
     },
     {
       "id": "2339",
+      "img": "https://www.lapolar.cl/dw/image/v2/BCPP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwfb0b1718/images/large/3CC21376426.jpg?sw=1200&sh=1200&sm=fit",
       "nombre": "Samsung A30",
       "caracteristicas": [
         "Camara 10 MPx",
@@ -86,6 +92,7 @@
     },
     {
       "id": "2340",
+      "img": "https://cdnx.jumpseller.com/test12345/image/6854436/resize/1200/1200?1572457523",
       "nombre": "Huawei Y6",
       "caracteristicas": [
         "Camara 10 MPx",
@@ -100,6 +107,7 @@
     },
     {
       "id": "2341",
+      "img": "https://media.spdigital.cl/__sized__/products/tmp8rz2flfm_72620498-thumbnail-1080x1080-70.jpg",
       "nombre": "Huawei Y7",
       "caracteristicas": [
         "Camara 10 MPx",

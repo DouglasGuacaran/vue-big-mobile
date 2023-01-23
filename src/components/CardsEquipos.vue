@@ -3,11 +3,10 @@
       class="mx-auto"
     >
     <v-img
-    height="100"
-    width="45 px"
+    height="180"
     border-radius="15 px"
     contain
-    src="https://depor.com/resizer/wxsfbFb8TFOb0WEf4BcrSaZ5I1M=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/KWPHGOXCA5EIFDUFDS6TUVE6LI.jpg"
+    :src="`${imgSrc}`"
     class="grey darken-3"
     ></v-img>
     <v-card-text>
@@ -58,6 +57,7 @@ export default {
     },
     name:"CardEquipos",
     props:{
+        imgSrc: String,
         id:String,
         subtitulo: String,
         caracteristicas: String,
@@ -72,7 +72,7 @@ computed:{
     methods:{
       ...mapActions(['agregarEquiposAction','funcionSubTotalAction']),
       agregarEquipos(){
-        const obj = {nombre:this.subtitulo,precio:this.precio}
+        const obj = {nombre:this.subtitulo,precio:this.precio,img:this.imgSrc }
         this.agregarEquiposAction(obj);
       },
       funcionSubTotal(){

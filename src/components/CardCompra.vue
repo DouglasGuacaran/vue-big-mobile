@@ -1,27 +1,23 @@
 <template>
-    <v-card>
-      <v-row>
-            <v-col cols="4" >          
+    <v-card 
+    width="160" class="text-center pt-2">
               <v-img
-              height="75"
+              width="100"
+              max-height="100"
               contain
-              src="https://www.inetshop.cl/sitionuevo/wp-content/uploads/2021/08/MOTOROLA-MOTO-G10-POWER-64GB-gray.jpg"
+              :src="`${imgSrc}`"
               >
               </v-img>
-            </v-col>
-            <v-col cols="8">
-              <v-row>
-                <v-col >
+
+            <v-card-text cols="8">
+              
                   <h5 class="text--primary text-center">
                     {{nombre}}
                   </h5>
                   <h5 class="text--primary text-center">
-                    {{precio}}     
+                    {{precio}} $ Chilenos
                   </h5>
-                </v-col>
-              </v-row>
-          </v-col>
-      </v-row>      
+          </v-card-text>
   </v-card>
 </template>
 
@@ -33,6 +29,7 @@ export default {
     }),
     name:"CardCompra",
     props:{
+        imgSrc:String,
         nombre:String,
         precio:String
     },
