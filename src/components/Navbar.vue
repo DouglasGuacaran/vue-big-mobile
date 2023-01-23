@@ -94,7 +94,7 @@ export default {
           { title: 'Equipos y Acesorios', icon: 'mdi-forum', path:'/bigmobile.cl/equiposyaccesorios' },
           { title: 'Planes', icon: 'mdi-forum', path:'/bigmobile.cl/planes' },
           { title: 'Prepago', icon: 'mdi-forum', path:'/bigmobile.cl/prepago' },
-          { title: 'Oficina Virtual', icon: 'mdi-forum', path:'/bigmobile.cl/oficinavirtual' },
+          { title: 'Contacto', icon: 'mdi-forum', path:'/bigmobile.cl/contacto' },
           { title: 'Checkout', icon: 'mdi-forum', path:'/bigmobile.cl/equiposyaccesorios/checkout' },
 
         ],

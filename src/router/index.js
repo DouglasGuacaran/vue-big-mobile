@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Confirmacion from "../views/Confirmacion.vue";
 import Checkout from "../views/Ckeckout.vue";
-import OficinaVirtual from "../views/OficinaVirtual.vue";
+import Contacto from "../views/Contacto.vue";
 import Planes from "../views/Planes.vue";
 import Prepago from "../views/Prepago.vue";
 import EquiposAccesorios from "../views/Equipos&Accesorios.vue";
@@ -33,9 +33,9 @@ const routes = [
     component: Prepago,
   },
   {
-    path: "/bigmobile.cl/oficinavirtual",
-    name: "OficinaVirtual",
-    component: OficinaVirtual,
+    path: "/bigmobile.cl/contacto",
+    name: "Contacto",
+    component: Contacto,
   },
   {
     path: "/bigmobile.cl/equiposyaccesorios/checkout",
