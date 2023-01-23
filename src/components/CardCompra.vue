@@ -6,6 +6,7 @@
               max-height="100"
               contain
               :src="`${imgSrc}`"
+              class="img"
               >
               </v-img>
 

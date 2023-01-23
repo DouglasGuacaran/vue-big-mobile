@@ -2,28 +2,30 @@
   <v-card 
   width="344"
   shaped
+  class="d-flex flex-column align-center"
   >
+  <v-spacer></v-spacer>
     <v-img
-      width="344"
-      max-height="325"
+      width="340"
+      height="350"
       :src="`${imgSrc}`"
       contain
 
     ></v-img>
     <v-card-title>
-      <h2>
+      <h3 class="text-h4 text-center">
         {{ subtitulo }}
-      </h2>
+      </h3>
     </v-card-title>
     <v-card-subtitle>
-      <h3>
+      <h3 class="mt-4">
         {{ parrafo }}
       </h3>
     </v-card-subtitle>
     <v-card-actions>
       <v-btn 
       to="/bigmobile.cl/equiposyaccesorios"
-      class="purple--text"
+      class=" ma-5 purple--text"
       >
       Entrar
     </v-btn>
@@ -47,5 +49,7 @@ export default {
 </script>
 
 <style>
-
+.v-image{
+  margin:auto
+}
 </style>

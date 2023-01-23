@@ -5,9 +5,9 @@
         Bienvenido a mi sitio web
       </h3>
     </div>
-    <v-row>
-      <v-col class="mx-auto" v-for="(item, index) in Data.opiniones" :key="index" >
-        <Card :imgSrc="item.img" :subtitulo="item.nombre" :parrafo="item.texto"/>
+    <v-row class="">
+      <v-col class="ma-2 text-center" v-for="(item, index) in Data.opiniones" :key="index" >
+        <Card centered :imgSrc="item.img" :subtitulo="item.nombre" :parrafo="item.texto"/>
       </v-col>
     </v-row>
   </v-container>
