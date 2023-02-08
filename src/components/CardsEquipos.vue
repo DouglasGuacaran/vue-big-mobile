@@ -9,6 +9,9 @@
     :src="`${imgSrc}`"
     class="grey darken-3"
     ></v-img>
+    <div>
+      
+    </div>
     <v-card-text>
       <v-row class="text-h4 text--primary">
         <v-col class="text-center">
@@ -72,6 +75,7 @@ computed:{
     methods:{
       ...mapActions(['agregarEquiposAction','funcionSubTotalAction']),
       agregarEquipos(){
+        
         const obj = {nombre:this.subtitulo,precio:this.precio,img:this.imgSrc }
         this.agregarEquiposAction(obj);
       },

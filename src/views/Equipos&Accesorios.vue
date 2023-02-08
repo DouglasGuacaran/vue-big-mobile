@@ -42,7 +42,8 @@
         <v-row>
         <v-col v-for="(item, index) in Data.productos" :key="'A'+index" cols="12" sm="4" md="4">
           <Card
-            :imgSrc="`${item.img}`"
+            :imgSrc="require(`../assets/img/${item.img}`)"
+            
             :id="`${item.id}`"
             :subtitulo="`${item.nombre}`"
             :caracteristicas="`${item.caracteristicas}`"
