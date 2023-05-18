@@ -25,7 +25,7 @@
     <v-card-actions>
       <v-btn 
       to="/bigmobile.cl/equiposyaccesorios"
-      class=" ma-5 purple--text"
+      class=" ma-5"
       >
       Entrar
     </v-btn>
@@ -52,4 +52,5 @@ export default {
 .v-image{
   margin:auto
 }
+
 </style>

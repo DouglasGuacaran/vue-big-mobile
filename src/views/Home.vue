@@ -2,7 +2,7 @@
   <v-container>
     <div>
       <h3 class="text-h5 text-sm-h4 text-center">
-        Bienvenido a mi sitio web
+        Bienvenido a Big Mobile
       </h3>
     </div>
     <v-row class="">

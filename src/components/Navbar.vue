@@ -1,49 +1,29 @@
 <template>
   <div>
-    <v-app-bar
-      color="deep-purple accent-4"
-      dense
-      dark
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Big Mobile</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-menu
-        left
-        bottom
+      <v-app-bar
+        color="accent-4"
+        dense
+        dark
       >
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            icon
-            v-bind="attrs"
-            v-on="on"
-          >
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </template>
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-        <v-list>
-          <v-list-item
-            v-for="n in 5"
-            :key="n"
-            @click="() => {}"
-          >
-            <v-list-item-title>Option {{ n }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </v-app-bar>
+        <v-toolbar-title>Big Mobile</v-toolbar-title>
+
+        <v-spacer></v-spacer>
+        
+        
+        <v-btn-toggle v-model="showButtons">
+          <v-btn v-if="$vuetify.breakpoint.smAndUp" class="mr-2" to="/bigmobile.cl/equiposyaccesorios" border="2">
+            Equipos
+          </v-btn>
+          <v-btn v-if="$vuetify.breakpoint.smAndUp" to="/" class="ml-2">
+            Home
+          </v-btn>
+        </v-btn-toggle>
+        <v-btn icon>
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
+      </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
       absolute
@@ -87,6 +67,7 @@
 export default {
   name:"navbarComponent",
   data: () => ({
+      showButtons: true,
       drawer: false,
       group: null,
       items: [
@@ -99,7 +80,11 @@ export default {
 
         ],
     }),
-
+    computed: {
+    isMobile() {
+      return window.innerWidth < 769;
+    }
+  },
     watch: {
       group () {
         this.drawer = false
@@ -114,5 +99,6 @@ export default {
   .navigation-drawer{
     background-color: red;
   }
+  
 }
 </style>

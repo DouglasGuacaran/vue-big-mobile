@@ -7,7 +7,7 @@
     border-radius="15 px"
     contain
     :src="`${imgSrc}`"
-    class="grey darken-3"
+    class="ligth"
     ></v-img>
     <div>
       

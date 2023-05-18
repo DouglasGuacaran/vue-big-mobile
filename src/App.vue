@@ -24,12 +24,11 @@ export default {
 </script>
 
 <style>
+
 .rounded-img {
   border-radius:15px;
 }
-
 .white--text{
   text-decoration: none;
 }
-
 </style>

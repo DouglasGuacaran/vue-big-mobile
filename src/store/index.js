@@ -11,9 +11,10 @@ export default new Vuex.Store({
     descuento: 0
   },
   mutations: {
-    agregaraEquipos(state, post) {
-      console.log(post)
+    agregarEquipos(state, post) {
+      console.log(post);
       state.equiposAgregados.push({
+        id: post.id,
         nombre: post.nombre,
         precio: post.precio,
         img: post.img
@@ -31,15 +32,28 @@ export default new Vuex.Store({
         state.total = state.subTotal - state.descuento
       }
 
-    }
+    },
+    eliminarEquipo(state, equipo) {
+      console.log(equipo);
+      const index = state.equiposAgregados.findIndex((e) => e.nombre === equipo.nombre);
+      if (index !== -1) {
+        state.subTotal -= state.equiposAgregados[index].precio;
+        state.equiposAgregados.splice(index, 1);
+        state.descuento = state.subTotal < 100000 ? parseInt(0.05 * state.subTotal) : parseInt(0.07 * state.subTotal);
+        state.total = state.subTotal - state.descuento;
+      }
+    },
   },
   actions: {
     agregarEquiposAction(context, post) {
-      context.commit("agregaraEquipos", post)
+      context.commit("agregarEquipos", post)
     },
     funcionSubTotalAction(context, post) {
       context.commit("subTotalMutation", post)
-    }
+    },
+    eliminarEquipo(context, equipo) {
+      context.commit('eliminarEquipo', equipo);
+    },
   },
   modules: {},
 });
