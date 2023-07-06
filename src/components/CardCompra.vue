@@ -9,6 +9,7 @@
         {{ nombre }}
       </h5>
       <h5 class="text--primary text-center">{{ precio }} $ Chilenos</h5>
+      <h6>cantidad: {{ cantidad }}</h6>
     </v-card-text>
   </v-card>
 </template>
@@ -24,11 +25,12 @@ export default {
     imgSrc: String,
     nombre: String,
     precio: String,
+    cantidad: Number,
   },
   methods:{
     ...mapActions(['eliminarEquipo']),
     deleteCard(){
-      const obj = {id:this.id,nombre:this.nombre,precio:this.precio,img:this.imgSrc }
+      const obj = {id:this.id,nombre:this.nombre,precio:this.precio,img:this.imgSrc,cantidad:this.cantidad }
       this.eliminarEquipo(obj);
     },
   }

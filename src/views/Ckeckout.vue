@@ -104,6 +104,7 @@
             <CardCompra 
             :nombre="equipo.nombre"
             :precio="equipo.precio"
+            :cantidad="equipo.cantidad"
             />
           </v-col>
         </v-row>

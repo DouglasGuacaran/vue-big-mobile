@@ -20,6 +20,7 @@
           :imgSrc="equipo.img"
           :nombre="equipo.nombre"
           :precio="equipo.precio"
+          :cantidad="equipo.cantidad"
           />
         </v-col>
         </v-row>
@@ -49,6 +50,7 @@
             :caracteristicas="`${item.caracteristicas}`"
             :precioAnt="`${item.precio_normal}`"
             :precio="`${item.precio_promo}`"
+            :cantidadItem="`${item.cantidad}`"
           />
         </v-col>
         </v-row>      

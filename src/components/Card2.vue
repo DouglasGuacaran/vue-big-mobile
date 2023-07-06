@@ -10,7 +10,7 @@
     ></v-img>
     <v-card-text>
       <div class="text-h6 text--primary text-center">
-        {{parrafo}}     
+        {{parrafo}}    
       </div>
       <p class="text--primary text-end">
         {{subtitulo}}

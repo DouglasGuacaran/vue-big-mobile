@@ -55,7 +55,7 @@ export default {
   name: 'equiposView',
     data(){
       return{
-        // width: 100,
+        cantidadItem: 0,
       }
     },
     name:"CardEquipos",
@@ -78,6 +78,7 @@ computed:{
         
         const obj = {nombre:this.subtitulo,precio:this.precio,img:this.imgSrc }
         this.agregarEquiposAction(obj);
+        this.cantidadItem += 1;
       },
       funcionSubTotal(){
         let obj = {cantidad:parseInt(this.precio)}
